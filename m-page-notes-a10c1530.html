@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>威廉希尔简明指南 · 访问提醒与平台介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #f4f5f7;
+            color: #1e1e2a;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        a {
+            color: #015c8f;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+            transition: color .2s;
+        }
+        a:hover {
+            color: #0b3c5a;
+        }
+
+        /* 深色头图 (hero) */
+        .hero {
+            background: linear-gradient(145deg, #0f1729 0%, #1a2744 100%);
+            padding: 3.5rem 1.5rem 3rem 1.5rem;
+            text-align: center;
+            color: #e9edf5;
+        }
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 0.75rem;
+        }
+        .hero .subline {
+            font-size: 1.1rem;
+            max-width: 680px;
+            margin: 0 auto 1.2rem auto;
+            opacity: 0.88;
+        }
+        .hero .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(2px);
+            padding: 0.45rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: #ccd9f0;
+            margin-top: 0.5rem;
+        }
+
+        /* 主内容区 + 卡片网格 */
+        .main-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2.5rem 1.8rem 4rem 1.8rem;
+        }
+
+        .intro-text {
+            margin-bottom: 2.8rem;
+            font-size: 1.05rem;
+            background: #fff;
+            padding: 1.8rem 2.2rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            border: 1px solid #eaeef4;
+        }
+        .intro-text p {
+            margin-bottom: 1rem;
+        }
+        .intro-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 信息卡片网格 — 用途卡片 + 适合人群 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 2.2rem 0 2rem 0;
+        }
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 1.8rem 1.8rem 2rem 1.8rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+            border: 1px solid #e2e8f0;
+            transition: transform .15s ease, box-shadow .2s;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 30, 60, 0.06);
+        }
+        .card .icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.8rem;
+            display: block;
+        }
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+            letter-spacing: -0.3px;
+            color: #14203a;
+        }
+        .card p, .card li {
+            font-size: 0.95rem;
+            color: #2d3748;
+        }
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0.6rem;
+        }
+        .card ul li {
+            padding: 0.25rem 0 0.25rem 1.4rem;
+            position: relative;
+        }
+        .card ul li::before {
+            content: "·";
+            position: absolute;
+            left: 0;
+            color: #015c8f;
+            font-weight: 700;
+        }
+        .card .badge-light {
+            background: #e9f0f9;
+            display: inline-block;
+            padding: 0.15rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: #1a3a5c;
+            font-weight: 500;
+            margin-top: 0.6rem;
+        }
+
+        /* 强调色链接段落 (自然链接段落) */
+        .link-paragraph {
+            background: #ffffff;
+            border-left: 5px solid #015c8f;
+            padding: 1.8rem 2.2rem;
+            border-radius: 16px;
+            margin: 2.2rem 0 2.8rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+        }
+        .link-paragraph p {
+            font-size: 1.05rem;
+            margin-bottom: 0.8rem;
+        }
+        .link-paragraph p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        /* FAQ 摘要 (紧凑) */
+        .faq-mini {
+            background: #f9fafc;
+            border-radius: 20px;
+            padding: 1.8rem 2rem;
+            margin: 2rem 0 1.2rem 0;
+            border: 1px solid #e2e9f2;
+        }
+        .faq-mini h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            color: #101b30;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .faq-item {
+            margin-bottom: 1rem;
+        }
+        .faq-question {
+            font-weight: 600;
+            color: #1f304a;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+        .faq-answer {
+            color: #38475a;
+            font-size: 0.95rem;
+        }
+
+        /* 小提示 */
+        .tip-note {
+            background: #f0f4fb;
+            border-radius: 14px;
+            padding: 1.2rem 1.8rem;
+            margin: 2rem 0 0.8rem 0;
+            font-size: 0.95rem;
+            border: 1px solid #d8e2f0;
+        }
+        .tip-note strong {
+            color: #0d2c4a;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #dce3ed;
+            margin: 2.5rem 0 1rem 0;
+        }
+
+        .footer-note {
+            font-size: 0.9rem;
+            color: #5d6e86;
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid #dce3ed;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 1.8rem; }
+            .hero { padding: 2.2rem 1rem 2rem 1rem; }
+            .main-wrapper { padding: 1.5rem 1rem 3rem 1rem; }
+            .intro-text, .link-paragraph, .faq-mini { padding: 1.2rem 1.2rem; }
+            .card-grid { gap: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- 深色头图 -->
+    <header class="hero">
+        <h1>威廉希尔 · 简明指南</h1>
+        <p class="subline">平台信息与访问提醒 — 理性使用，从了解开始。</p>
+        <span class="badge">综合介绍 · 用途卡片 · 人群参考</span>
+    </header>
+
+    <div class="main-wrapper">
+        <!-- 简介段落 (从简明指南和访问提醒角度) -->
+        <div class="intro-text">
+            <p>威廉希尔（William Hill）是一家历史悠久的在线娱乐平台，提供体育赛事投注、博彩游戏及其他互动服务。本页从实用角度整合平台主要用途、适宜人群以及基础访问提醒，帮助新用户快速形成清晰认知。无论你是初次了解还是希望梳理信息，以下内容可供参考。</p>
+            <p>在决定使用前，建议先了解本地法规与平台规则，并设定个人使用边界。下文卡片摘要可辅助你判断该平台是否符合自身需求。</p>
+        </div>
+
+        <!-- 信息卡片区 —— 用途卡片 + 适合人群 -->
+        <div class="card-grid">
+            <div class="card">
+                <span class="icon">⚽</span>
+                <h3>体育赛事投注</h3>
+                <p>覆盖足球、篮球、网球、赛马等主流项目。提供实时赔率、滚球玩法以及赛事统计辅助。适合对体育比赛有深入了解、偏好动态投注的用户。</p>
+                <span class="badge-light">核心功能</span>
+            </div>
+            <div class="card">
+                <span class="icon">🎲</span>
+                <h3>娱乐场 &amp; 博彩游戏</h3>
+                <p>包含老虎机、轮盘、二十一点、视频扑克等经典项目。部分游戏设有人机模式或练习版，适合希望休闲消遣的成年用户。注意控制时长与投入。</p>
+            </div>
+            <div class="card">
+                <span class="icon">🧑‍💼</span>
+                <h3>适合人群摘要</h3>
+                <ul>
+                    <li>对体育数据敏感、有分析习惯的爱好者</li>
+                    <li>已有其他平台经验、追求功能集合的娱乐型用户</li>
+                    <li>清楚自身预算、不依赖博彩获利的成年人</li>
+                    <li>对平台历史与合规性有基本要求的理性参与者</li>
+                </ul>
+                <span class="badge-light">参考画像</span>
+            </div>
+        </div>
+
+        <!-- 自然链接段落 (嵌入“威廉希尔”链接) -->
+        <div class="link-paragraph">
+            <p>如果你希望直接访问平台，可通过下方句子内的链接跳转至官方网站。需要注意的是，不同司法管辖区对在线博彩的规定存在差异，使用前请自行核实当地政策。</p>
+            <p><strong>简要指引：</strong> 若你已确认自身所在地区允许，并希望进一步了解功能详情或注册账户，可前往 <a href="https://m-page-williamhill.com">威廉希尔</a> 查阅最新界面与条款。建议同时关注平台的责任博彩工具与账户限制选项。</p>
+            <p>此外，也可通过官方帮助中心或客服渠道获取更具体的操作说明，避免依赖未经核实的第三方信息。</p>
+        </div>
+
+        <!-- FAQ 摘要 (紧凑) -->
+        <div class="faq-mini">
+            <h3>📌 常见疑问摘要</h3>
+            <div class="faq-item">
+                <span class="faq-question">Q：威廉希尔支持哪些支付方式？</span>
+                <span class="faq-answer">通常包括信用卡、电子钱包（如Skrill、Neteller）及部分本地转账方式，具体以实际页面为准。部分区域可能有限制。</span>
+            </div>
+            <div class="faq-item">
+                <span class="faq-question">Q：最低投注额或存款额是多少？</span>
+                <span class="faq-answer">因项目与地区而异，体育投注最低投注额常为 0.10 单位货币，娱乐场游戏门槛类似。建议注册前查看对应条款。</span>
+            </div>
+            <div class="faq-item">
+                <span class="faq-question">Q：是否有练习模式或新手引导？</span>
+                <span class="faq-answer">部分娱乐场游戏提供免费试玩；体育投注界面通常有赔率说明及帮助弹窗。新手可先浏览帮助中心。</span>
+            </div>
+        </div>
+
+        <!-- 访问提醒小卡片 -->
+        <div class="tip-note">
+            <strong>⚠️ 访问提醒：</strong> 请确保你已年满法定年龄，并根据个人财务状况合理安排时间与资金。博彩涉及风险，不保证盈利。若感到压力或失控，建议立即停止并寻求专业帮助。本页面仅提供信息介绍，不构成任何诱导行为。
+        </div>
+
+        <hr />
+        <div class="footer-note">
+            页面仅供信息参考 · 请理性判断 · 查阅最新政策请以官方渠道为准
+        </div>
+    </div>
+</body>
+</html>
